@@ -1,14 +1,34 @@
+# Solution using print with new line char.
 for i in 1..100
+	output = ""
 
-	if i.modulo(3);	#or if i%3 == 0;
-		
-		if i.modulo(5);	#or if i%5 == 0; 
-			puts "FizzBuzz";
-		else 	puts "Fizz";
-		end
-		
-	elsif i.modulo(5);
-		puts "Buzz"
-	else 	puts i
+	if i%3 == 0
+		output << "Fizz"
 	end
+
+	if i%5 == 0
+		output << "Buzz"
+	end
+		
+	print (!output.empty? ? output : i.to_s) << "\n"
+	
 end
+
+# # Solution using nested loops.
+# for i in 1..100
+
+# 	if i%3 == 0
+
+# 		if i%5 == 0
+# 			p "FizzBuzz"
+# 		else
+# 			p "Fizz"
+# 		end
+
+# 	elsif i%5 == 0
+# 		p "Buzz"
+# 	else
+# 		p i
+# 	end
+
+# end
